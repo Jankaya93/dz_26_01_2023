@@ -10,4 +10,15 @@ int cislo_2 = Convert.ToInt32(Console.ReadLine());
 System.Console.Write("Введите число N3: ");
 int cislo_3 = Convert.ToInt32(Console.ReadLine());
 
-switch ()
+if(cislo_1>cislo_2 && cislo_1>cislo_3)
+{
+    System.Console.WriteLine("max = " + cislo_1);
+}
+else if(cislo_2>cislo_1 && cislo_2>cislo_3)
+{
+    System.Console.WriteLine("max = " + cislo_2);
+}
+else if (cislo_3>cislo_1 && cislo_3>cislo_2)
+{
+    System.Console.WriteLine("max = " + cislo_3);
+}
