@@ -7,6 +7,14 @@
 System.Console.Write("Введите число N: ");
 int N = Convert.ToInt32(Console.ReadLine());
 
+void PrintSquares(int N)
+{
+    for (int count = 1; count <= N; count++)
+    {
+        System.Console.Write(Math.Pow(count, 2) + ", ");
+    }
+}
+
 // int count = 1;
 
 // while (count <= N)
@@ -15,7 +23,4 @@ int N = Convert.ToInt32(Console.ReadLine());
 //     count++;
 // }
 
-for (int count = 1; count <= N; count++)
-{
-    System.Console.Write(Math.Pow(count, 2) + ", ");
-}
+PrintSquares(N);
