@@ -4,7 +4,7 @@
 
 int[] GetArray()
 {
-    int[] arr = Console.ReadLine().Split("").Select(int.Parse).ToArray();
+    int[] arr = Console.ReadLine().Split(" ").Select(int.Parse).ToArray();
     return arr;
 }
 
