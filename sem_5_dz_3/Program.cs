@@ -1,13 +1,14 @@
 ﻿// Задача 38: Задайте массив вещественных чисел. Найдите разницу между максимальным и минимальным элементов массива.
 // [3 7 22 2 78] -> 76
 
-double[] GenerateArray(int size, double leftRange, double rightRange)   // Создание массива с рандомными вещественными числами в мин/мах диапазоне
+double[] GenerateArray(int size, int leftRange, int rightRange)   // Создание массива с рандомными вещественными числами в мин/мах диапазоне
 {
     double[] array = new double[size];
     var rand = new Random();
     for (int i = 0; i < array.Length; i++)
     {
-        array[i] = Math.Round(rand.NextDouble() * ((rightRange - leftRange) + leftRange), 2);
+        // array[i] = Math.Round(rand.NextDouble() * ((rightRange - leftRange) + leftRange), 2);    // если хотим использовать этот вариант рандома во входных данных метода нужно заменить инт левой и правой границы на дабл.
+        array[i] = Math.Round(rand.Next(leftRange, rightRange) + rand.NextDouble(), 2);
     }
     return array;
 }
@@ -49,10 +50,9 @@ double GetResult(double maxNumber, double minNumber)    // вычисление 
     return reznica;
 }
 
-double[] myArray = GenerateArray(5, 0.0, 10.0);
+double[] myArray = GenerateArray(5, 0, 10);
 PrintArray(myArray);
 System.Console.WriteLine(GetResult(maxNumber(myArray), minNumber(myArray)));
-
 
 // ====== Работающий вариант с целыми числами
 // int[] GenerateArray(int size, int leftRange, int rightRange)
